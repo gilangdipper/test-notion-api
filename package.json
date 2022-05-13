@@ -2,16 +2,21 @@
   "name": "test-notion-api",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://gilangdipper.github.io/test-notion-api/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "next": "12.1.6",
     "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "react-dom": "18.1.0",
+    "gh-pages": "^4.0.0"
   },
   "devDependencies": {
     "@types/node": "17.0.32",
