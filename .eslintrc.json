@@ -1,3 +1,49 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "eslint:recommended",
+    "next/core-web-vitals",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "parserOptions": {
+    "project": ["./tsconfig.json"]
+  },
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "import/no-anonymous-default-export": ["error", {
+      "allowArray": false,
+      "allowArrowFunction": true,
+      "allowAnonymousClass": false,
+      "allowAnonymousFunction": false,
+      "allowCallExpression": true,
+      "allowLiteral": false,
+      "allowObject": false
+    }],
+    "no-restricted-syntax": ["error", "LabeledStatement", "WithStatement"],
+    "@typescript-eslint/default-param-last": "off",
+    "import/prefer-default-export": "off",
+    "react/require-default-props": "off",
+    "@typescript-eslint/no-explicit-any": "error",
+    "react/jsx-props-no-spreading": "off",
+    "react/function-component-definition": ["error", {
+      "namedComponents": ["function-declaration", "function-expression", "arrow-function"],
+      "unnamedComponents": ["function-expression", "arrow-function"]
+    }],
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "all",
+        "endOfLine": "lf",
+        "semi": false,
+        "singleQuote": true,
+        "printWidth": 80,
+        "tabWidth": 2
+      }
+    ]
+  }
 }
